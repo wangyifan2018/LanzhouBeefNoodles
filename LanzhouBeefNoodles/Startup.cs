@@ -1,3 +1,4 @@
+using LanzhouBeefNoodles.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -17,6 +18,9 @@ namespace LanzhouBeefNoodles
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddTransient<INoodleRepository, MockNoodleRepository>();
+            //services.AddSingleton;
+            //services.AddScoped;
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
