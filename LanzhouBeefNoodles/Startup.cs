@@ -21,6 +21,7 @@ namespace LanzhouBeefNoodles
             services.AddTransient<INoodleRepository, MockNoodleRepository>();
             //services.AddSingleton;
             //services.AddScoped;
+            services.AddTransient<IFeedbackRepository, MockFeedbackRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
